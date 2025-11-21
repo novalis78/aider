@@ -6,7 +6,7 @@ from .base_coder import Coder
 class ArchitectCoder(AskCoder):
     edit_format = "architect"
     gpt_prompts = ArchitectPrompts()
-    auto_accept_architect = False
+    auto_accept_architect = True  # Genesis Agent: No confirmations, autonomous action
 
     def reply_completed(self):
         content = self.partial_response_content
